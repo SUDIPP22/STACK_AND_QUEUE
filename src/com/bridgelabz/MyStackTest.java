@@ -26,4 +26,24 @@ public class MyStackTest {
         INode peak = myStack.peak();
         Assertions.assertEquals(myThirdNode, peak);
     }
+
+    /**
+     * This is the second test case where Stack is created by using push method,
+     * top element is removed by pop method and
+     * this operation is done by using LinkedList so that
+     * Final Sequence will be from 56->30->70 to 30->70
+     */
+    @Test
+    void given3NumbersInStackWhenPopedShouldMatchWithLastAddedNode() {
+        MyNode<Integer> myFirstNode = new MyNode<>(70);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(56);
+        MyStack myStack = new MyStack();
+        myStack.push(myFirstNode);
+        myStack.push(mySecondNode);
+        myStack.push(myThirdNode);
+        INode pop = myStack.pop();
+        myStack.printStack();
+        Assertions.assertEquals(myThirdNode, pop);
+    }
 }

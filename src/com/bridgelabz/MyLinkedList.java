@@ -44,9 +44,10 @@ public class MyLinkedList {
     }
 
     /* This method is used for deleting the first node */
-    public void pop() {
+    public INode pop() {
         INode tempNode = this.head;
         this.head = head.getNext();
+        return tempNode;
     }
 
     /* This method is used for deleting the last node */
