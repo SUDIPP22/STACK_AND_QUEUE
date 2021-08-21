@@ -24,4 +24,12 @@ public class MyQueue {
     public void printQueue() {
         myLinkedList.printMyNodes();
     }
+
+    /**
+     * This method is used to remove the top element from the Queue
+     * @return returns the top element from the stack.
+     */
+    public INode dequeue() {
+        return myLinkedList.pop();
+    }
 }
